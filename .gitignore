@@ -31,3 +31,6 @@ node_modules
 
 #bower stuff
 public/components
+
+#browserified stuff
+public/javascripts
