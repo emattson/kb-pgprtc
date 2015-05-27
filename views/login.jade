@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .container
+    form#login.form-horizontal.sign-in.center-block(action='/login' method='post')
+      fieldset
+        legend Keybase Sign In
+        .form-group
+          label.input-lg.col-md-4.col-xs-12(for='username') Username
+          input#username.input-lg.col-md-8.col-xs-12(name='username', type=text, placeholder='Username')
+          button#register.btn.btn-primary Register
+        p.text-center Run the following in your terminal then paste below
+        .well
+          p keybase sign -m "#{nonce}" | pbcopy
+        .form-group
+          label.input-lg.col-md-4.col-xs-12(for='passphrase') Verification String
+          textarea#password.input-lg.col-md-8.col-xs-12(name='password', type=text, placeholder='Paste here')
+        input.btn.btn-lg.btn-block.btn-primary(type='submit' value='Verify')
+
+block javascript
+  script(src='javascripts/main.js')

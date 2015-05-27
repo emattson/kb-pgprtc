@@ -32,8 +32,8 @@ module.exports = function(grunt) {
                 tasks: ['default']
             },
             server: {
-                files: ['app.js', 'bin/www', 'routes/*.js'],
-                tasks: ['reload']
+                files: ['app.js', 'Gruntfile.js', 'bin/www', 'routes/*.js'],
+                tasks: ['default']
             },
             jade: {
                 files: '**/*.jade',
