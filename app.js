@@ -44,6 +44,7 @@ if (app.get('env') === 'development') {
       error: err
     });
   });
+  app.locals.pretty = true;
 }
 
 // production error handler
@@ -54,6 +55,7 @@ app.use(function(err, req, res, next) {
     message: err.message,
     error: {}
   });
+  app.locals.pretty = true;
 });
 
 

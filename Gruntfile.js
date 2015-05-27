@@ -33,7 +33,7 @@ module.exports = function(grunt) {
             },
             server: {
                 files: ['app.js', 'bin/www', 'routes/*.js'],
-                tasks: [reload]
+                tasks: ['reload']
             },
             jade: {
                 files: '**/*.jade',
@@ -41,6 +41,7 @@ module.exports = function(grunt) {
             }
         }
     });
+
     grunt.registerTask('reload', ['express:dev', 'watch']);
     grunt.registerTask('default', ['browserify', 'reload']);
 
